@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,22 +13,15 @@
 </head>
 
 <body>
-    
-    <audio controls autoplay>
-        <source src="./audio/audio_2023-03-02_20-23-50.ogg" type="audio/ogg">
-        <source src="GFG.mp3" type="audio/mpeg">
-    </audio>
-    
-    
     <div class="main-box">
         <div class="container">
-            <h1 class="text-center mt-5 mb-5">Avto Imtihonga Xush kelibsiz</h1>
-            <h2 class="text-center text-warning mt-5"">CHOOSE THE LEVEL</h2>
-            <div class="row justify-content-center">
-                <div class="box-select-questions mt-3 col-3 d-flex flex-column justify-content-center">
-                    <button id="lvl" data-lvl="easy" class="btn-hover js-main-btn mb-3 btn btn-success">Ease: 8 min</button>
-                    <button id="lvl" data-lvl="medium" class="btn-hover js-main-btn btn btn-success mb-3">Medium: 5 min</button>
-                    <button id="lvl" data-lvl="hard" class="btn-hover js-main-btn btn btn-success">Hard: 3 min</button>
+            <h1 class="text-center mt-5">Avto Imtihonga Xush kelibsiz</h1>
+            <h2 class="text-center text-secondary mt-5">CHOOSE THE LEVEL</h2>
+            <div class="row justify-content-center mt-2">
+                <div class="box-select-questions col-3 d-flex flex-column justify-content-center">
+                    <button id="lvl" data-lvl="easy" class="text-light js-main-btn btn btn-info mb-3">Ease: 8 min</button>
+                    <button id="lvl" data-lvl="medium" class="text-light js-main-btn btn btn-info mb-3">Medium: 5 min</button>
+                    <button id="lvl" data-lvl="hard" class="text-light js-main-btn btn btn-info">Hard: 3 min</button>
                 </div>
             </div>
         </div>
@@ -35,22 +29,22 @@
     <section class="testing-section d-none">
         <div class="container ">
             <div class="d-flex align-items-center justify-content-between">
-                <a href="/index.html" class="btn btn-light mt-5">🢨 Back</a href="/index.html">
+                <a href="/index.html" class="btn btn-success mt-5">< Back</a href="/index.html">
                     <h2 class="level"></h2> <span class="time"></span><span class="number">Number of
                         attempts: </span>
                         <p class="correct-answear"></p>
                     </div>
-                    <ul class="js-list">
+                    <ul class="js-list bg-style">
                         <li class="js-list">
-                            <div class="main-box mt-5">
+                            <div class="main-box pt-2 pb-2 d-flex align-items-center justify-content-center flex-column">
                                 <div class="questions-box d-flex flex-column align-items-center">
-                                    <img class="js-image" src="/images/aholi_punkti.gif" alt="" width="250">
+                                    <img class="js-image" src="/images/aholi_punkti.gif" alt="" width="200">
                                     <h3 class="question">Bu qanday yo'l belgisi ?</h3>
                                 </div>
                                 <div class="answear-box d-flex flex-column">
-                                    <p class="js-answear  btn btn-warning  mb-3 "></p>
-                                    <p class="js-answear btn btn-warning  mb-3 "></p>
-                                    <p class="js-answear  btn btn-warning  mb-3 "></p>
+                                    <p class="js-answear  btn btn-secondary  mb-3 "></p>
+                                    <p class="js-answear btn btn-secondary  mb-3 "></p>
+                                    <p class="js-answear  btn btn-secondary mb-3 "></p>
                                 </div>
                             </div>
                         </li>
@@ -68,7 +62,7 @@
             <div class="win-box d-none">
                 <div class="container">
                     <div class="text-center centrovka">
-                        <p class="you-win">You Win 😀</p>
+                        <p class="you-win">You Win</p>
                         <a href="./index.html" class="btn btn-light restart">Restart</a>
                     </div>
                 </div>

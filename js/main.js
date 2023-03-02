@@ -31,16 +31,16 @@ function timeFunc() {
 }
 
 function timeRender(){
-   if(timeSec > 0){
-    timeSec--;
-   } else{
-    timeSec = 59;
-    timeMin--;
-   }
-   if(timeMin == 0 && timeSec == 0){
-    elTestSection.className = "d-none"
+    if(timeSec > 0){
+        timeSec--;
+    } else{
+        timeSec = 59;
+        timeMin--;
+    }
+    if(timeMin == 0 && timeSec == 0){
+        elTestSection.className = "d-none"
         document.querySelector(".restart-box").className = "d-block";
-   }
+    }
     document.querySelector(".time").textContent = `TIME : ${timeMin} : ${timeSec}`;
 }
 
@@ -56,10 +56,10 @@ function correctFunc(params) {
             if(corectAnswear >=8){
                 elTestSection.className = "d-none"
                 audioYouWin.play()
-            document.querySelector(".win-box").className = "d-block";
+                document.querySelector(".win-box").className = "d-block";
             }
             setTimeout(() => {
-                valu.style.backgroundColor = "#ffc107";
+                valu.style.backgroundColor = "#6C757D";
                 renderElement(roadSymbol.slice(randonNumber, randonNumber + 3))
             }, 500)
         } else {
@@ -76,21 +76,19 @@ function wrongFunc(params) {
     elAnswear.forEach((valu, index) => {
         if (index == params) {
             valu.style.backgroundColor = "red";
-            valu.style.color = "white";
             audioWrong.play()
             setTimeout(() => {
-                valu.style.backgroundColor = "#ffc107";
-                valu.style.color = "black";
+                valu.style.backgroundColor = "#6C757D";
                 renderElement(roadSymbol.slice(randonNumber, randonNumber + 3))
                 elCountWrong.textContent = `Number of
-                    attempts: ${WrongAnswear--}`
-
+                attempts: ${WrongAnswear--}`
+                
             }, 500)
         } else {
             if(WrongAnswear==0){
-               elTestSection.className = "d-none"
-               document.querySelector(".restart-box").className = "d-block"
-               audioGameOver.play()
+                elTestSection.className = "d-none"
+                document.querySelector(".restart-box").className = "d-block"
+                audioGameOver.play()
             }
             valu.classList.add("disabled");
             setTimeout(() => {
@@ -109,7 +107,7 @@ function renderElement(arra) {
             elAnswear[index].setAttribute("onclick", `correctFunc(${index})`)
         } else {
             elAnswear[index].setAttribute("onclick", `wrongFunc(${index})`)
-
+            
         }
     })
 }
@@ -136,10 +134,9 @@ document.addEventListener("click", (evt) => {
             userLvl = lvlObj.hard;
         }
         timeFunc();
-
+        
         document.querySelector(".time").textContent = `TIME : ${timeMin} : ${timeSec}`;
         setInterval(timeRender, 1000);
     }
 })
-
 
