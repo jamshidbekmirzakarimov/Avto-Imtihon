@@ -76,10 +76,6 @@ ul,li{
     margin-bottom: 55px;
 }
 
-.audio-box{
-    position: fixed;
-    top: -100px;
-}
 
 .variant{
     width: 100%;
@@ -91,4 +87,17 @@ ul,li{
 .bg-style{
     border: 1px solid #fff;
     border-radius: 10px;
+}
+
+.box-div{
+    flex-wrap: wrap;
+}
+
+.js-main-btn{
+    background-color: #00ffff;
+    border: none;
+    border-radius: 10px;
+    color: #000 !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
